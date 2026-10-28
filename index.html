@@ -169,6 +169,8 @@ section,header.hero,footer{position:relative;z-index:1}
 .card.photo{padding:0;overflow:visible;justify-content:flex-end;min-height:320px;border:0}
 .card.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:var(--r)}
 .card.photo .cap{position:relative;margin:14px;background:color-mix(in srgb,var(--surface) 92%,transparent);backdrop-filter:blur(8px);border-radius:14px;padding:16px 18px}
+.card.gift{flex-direction:row;gap:18px;align-items:center}.gift .gi{flex:none;width:56px;height:56px;border-radius:16px;display:grid;place-items:center;background:var(--bg);color:var(--accent)}.gift .gi svg{width:28px;height:28px}.gift .tag{font:500 11.5px/1 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}.gift h3{margin-top:8px}
+.card.expo{background:var(--wheat);border-color:transparent;color:#1B1A12}.card.expo .tag{color:#1B1A12;opacity:.75}.card.expo .gi{background:rgba(255,255,255,.5);color:#1B1A12}
 .c4{grid-column:span 4}.c5{grid-column:span 5}.c7{grid-column:span 7}.c8{grid-column:span 8}.c6{grid-column:span 6}
 @media (max-width:980px){.c4,.c5,.c7,.c8,.c6{grid-column:span 6}}
 @media (max-width:640px){.c4,.c5,.c7,.c8,.c6{grid-column:1/-1}}
@@ -195,7 +197,7 @@ dialog.lb button{position:absolute;top:10px;right:10px;border:0;border-radius:99
 .score div strong{display:block;color:var(--fg);font-size:18px}
 .quotes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
 .quote{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:26px;display:flex;flex-direction:column;gap:18px;justify-content:space-between}
-.quote p{font-size:18px;line-height:1.45}
+.quote p{font-size:17px;line-height:1.45}
 .quote footer{display:flex;justify-content:space-between;gap:10px;font:500 12px/1.3 var(--f-mono);color:var(--muted);letter-spacing:.04em}
 .stars{color:var(--accent);letter-spacing:2px}
 @media (max-width:900px){.quotes{grid-template-columns:1fr}}
@@ -311,10 +313,10 @@ footer.foot small{color:var(--muted);font-size:14px;display:block;line-height:1.
   <div class="wrap">
     <p class="eyebrow">ЮгАгро 2026 · 17–20 ноября · Краснодар</p>
     <h1>Студия в 10 минутах пешком от Экспограда</h1>
-    <p class="lead">Светлая студия 32 м² на улице Конгрессной для участников и гостей выставки. До четырёх человек, рабочий стол у окна, заселение по коду и отчётные документы для бухгалтерии.</p>
+    <p class="lead">Светлая студия 32 м² на улице Конгрессной для участников и гостей выставки. До четырёх человек, рабочий стол у окна, бесконтактное заселение по электронному замку и отчётные документы для бухгалтерии.</p>
     <div class="bookbar" role="group" aria-label="Даты проживания на выставку">
-      <div class="f"><span>Заезд</span><strong>16 ноября, 14:00</strong></div>
-      <div class="f"><span>Выезд</span><strong>21 ноября, 12:00</strong></div>
+      <div class="f"><span>Выставка</span><strong>17–20 ноября</strong></div>
+      <div class="f"><span>Заезд / выезд</span><strong>с 14:00 / до 12:00</strong></div>
       <div class="f"><span>Гости</span><strong>до 4 человек</strong></div>
       <a class="btn btn-accent" href="#book">Запросить бронь</a>
     </div>
@@ -330,7 +332,7 @@ footer.foot small{color:var(--muted);font-size:14px;display:block;line-height:1.
         <svg viewBox="0 0 50 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M46 4 C34 8 22 18 12 32"/><path d="M10 20 L12 33 L24 30"/></svg>
       </div>
       <div class="bar"><i></i><i></i><i></i><em>Конгрессная улица, 15 · 9 этаж из 16</em></div>
-      <img src="img/hero.jpg" alt="Гостиная зона студии: мятный холодильник, круглый белый стол, окна в пол с лёгким тюлем" width="1600" height="1200">
+      <img src="img/hero.jpg" alt="Гостиная зона студии: обеденный стол, диван и люстра-клетка у окон в пол" width="1600" height="1200" style="object-position:50% 62%">
     </div>
   </div>
 </header>
@@ -430,7 +432,7 @@ footer.foot small{color:var(--muted);font-size:14px;display:block;line-height:1.
   <div class="wrap">
     <div class="sec-head">
       <p class="eyebrow">Для командировки</p>
-      <h2 id="work-h">Всё, что нужно между сменами на стенде</h2>
+      <h2 id="work-h">Всё, что нужно в командировке</h2>
     </div>
     <div class="bento">
       <div class="card c4">
@@ -465,6 +467,14 @@ footer.foot small{color:var(--muted);font-size:14px;display:block;line-height:1.
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></div>
         <h3>Квартал рядом</h3>
         <p>ЖК «NEO-квартал Красная площадь»: магазины, кафе и банкомат у дома, лифт, видеонаблюдение во дворе.</p>
+      </div>
+      <div class="card c5 gift">
+        <div class="gi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2h4v3l1.5 2.5V21a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1V7.5L10 5z"/><path d="M8.5 12h7"/></svg></div>
+        <div><p class="tag">Для всех гостей</p><h3>Бутылка воды и гигиенический набор: мыло, шампунь, гель для душа</h3></div>
+      </div>
+      <div class="card c7 gift expo">
+        <div class="gi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="13" rx="1.5"/><path d="M3 12h18M12 8v13"/><path d="M12 8C10 4 6.5 4 6.5 6.2 6.5 8 9.5 8 12 8zM12 8c2-4 5.5-4 5.5-1.8C17.5 8 14.5 8 12 8z"/></svg></div>
+        <div><p class="tag">Гостям ЮгАгро · комплимент</p><h3>Тапочки и зубные наборы в подарок для участников и гостей выставки</h3></div>
       </div>
     </div>
   </div>
@@ -505,9 +515,12 @@ footer.foot small{color:var(--muted);font-size:14px;display:block;line-height:1.
       <div class="score"><b style="font-size:clamp(56px,7vw,88px)">10</b><div><strong>из 10 на Островке</strong>чистота, расположение, Wi-Fi</div></div>
     </div>
     <div class="quotes"><div class="perch-src sit" data-in="l" data-out="l" style="left:40px"><svg class="bird pale bob" viewBox="0 0 120 104"><use href="#bird"/></svg></div>
-      <article class="quote"><p>«Удобно бесконтактное заселение и вход и выход без ключа, квартира чистая, всё необходимое есть»</p><footer><span>Наталья · октябрь 2026</span><span class="stars" aria-label="Оценка 10 из 10">10/10</span></footer></article>
-      <article class="quote"><p>«Отличная квартира! Уютно, удобно, чисто, прекрасное расположение. Доброжелательный, внимательный, пунктуальный хозяин»</p><footer><span>Зинаида · сентябрь 2026</span><span class="stars" aria-label="Оценка 10 из 10">10/10</span></footer></article>
-      <article class="quote"><p>«Комфортное проживание. Своевременное заселение с предоставлением информации для проживания»</p><footer><span>Оксана · сентябрь 2026</span><span class="stars" aria-label="Оценка 10 из 10">10/10</span></footer></article>
+      <article class="quote"><p>«Удобно бесконтактное заселение, вход и выход без ключа, квартира чистая, всё необходимое есть, нас всё устроило»</p><footer><span>Наталья · октябрь 2026</span><span class="stars" aria-label="Оценка 10 из 10">10/10</span></footer></article>
+      <article class="quote"><p>«Была возможность заселиться раньше, нам не пришлось где-то проводить время до 14:00, поезд у нас приходит в 9:20. Хозяин всегда на связи, все бытовые вопросы решаются сразу»</p><footer><span>Елена · июнь 2026</span><span class="stars" aria-label="Оценка 10 из 10">10/10</span></footer></article>
+      <article class="quote"><p>«…Фото соответствуют реальности, очень удобно бесконтактное заселение, всё чисто, красиво, уютно. Особо порадовали разного вида „комплиментики“. Хозяин всё время на связи…»</p><footer><span>Анастасия · сентябрь 2026</span><span class="stars" aria-label="Оценка 10 из 10">10/10</span></footer></article>
+      <article class="quote"><p>«Не первый раз останавливаемся. Очень приятные и всегда чистые апартаменты. Матрас, подушки удобные, на кухне есть всё, что надо. Хорошая инфраструктура рядом, много магазинов, кафе, торговый центр»</p><footer><span>Илья · август 2026</span><span class="stars" aria-label="Оценка 10 из 10">10/10</span></footer></article>
+      <article class="quote"><p>«Чисто. Тихо. Есть всё необходимое. На районе много магазинов. Бесконтактное заселение. Залог вернули после выезда»</p><footer><span>Юлия · июнь 2026</span><span class="stars" aria-label="Оценка 10 из 10">10/10</span></footer></article>
+      <article class="quote"><p>«…Светлая, чистая, всё, что надо, есть для проживания. Удобный матрас и подушки. Такая милая люстра над столом, хотим тоже такую купить. …Хозяин был на связи даже поздно вечером»</p><footer><span>Наталья · декабрь 2025</span><span class="stars" aria-label="Оценка 10 из 10">10/10</span></footer></article>
     </div>
   </div>
 </section>
@@ -520,8 +533,7 @@ footer.foot small{color:var(--muted);font-size:14px;display:block;line-height:1.
         <div class="days" id="days" aria-label="Календарь ноября 2026"></div>
         <div class="legend">
           <span><i style="background:var(--wheat)"></i>Дни выставки</span>
-          <span><i style="background:color-mix(in srgb,var(--mint) 38%,transparent)"></i>Предлагаемое проживание, 5 ночей</span>
-        </div>
+                  </div>
         <div class="rules">
           <div><b>Заезд</b>с 14:00</div><div><b>Выезд</b>до 12:00</div>
           <div><b>Депозит</b>2 000 ₽, вернём при выезде</div><div><b>Нельзя</b>курить, вечеринки, питомцы</div>
@@ -577,8 +589,8 @@ footer.foot small{color:var(--muted);font-size:14px;display:block;line-height:1.
   h.forEach(function(x){var d=document.createElement('div');d.className='h';d.textContent=x;days.appendChild(d)});
   for(var i=0;i<6;i++){days.appendChild(document.createElement('div'))}
   for(var n=1;n<=30;n++){var d=document.createElement('div');d.className='d';d.textContent=n;
-    if(n>=16&&n<=21)d.classList.add('stay'); if(n>=17&&n<=20){d.classList.add('expo');d.title='ЮгАгро 2026'}
-    if(n===16||n===21)d.classList.add('edge'); days.appendChild(d)}
+    if(n>=17&&n<=20){d.classList.add('expo');d.title='ЮгАгро 2026'}
+    days.appendChild(d)}
 
   // copy buttons
   document.querySelectorAll('.copy').forEach(function(b){b.addEventListener('click',function(){
